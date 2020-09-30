@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String [] args){
+        DoublyLinkedList list = new DoublyLinkedList();
+        
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please enter list entries, one at a time. Enter \"Done\" when complete.");
+        
+        String x = userInput.nextLine();
+       
+        while (!x.equalsIgnoreCase("Done")){
+            list.addLast(x);
+            x = userInput.next();
+        }    
+        list.printForwardList();
+        System.out.println("");
+        list.printReverseList();
+    }  
+}
